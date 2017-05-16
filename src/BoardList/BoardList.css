@@ -1,0 +1,13 @@
+.boards-page-board-section-list {
+	display: flex;
+	flex-wrap: wrap;
+	list-style: none;
+    margin: 0;
+}
+
+.boards-page-board-section-list-item {
+	box-sizing: border-box;
+    padding: 0 1pc 8px 0;
+    position: relative;
+    width: 25%;
+}

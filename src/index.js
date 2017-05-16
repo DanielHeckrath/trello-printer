@@ -5,6 +5,9 @@ import App from './App';
 import './index.css';
 import configureStore from './store/configure-store';
 
+import injectTapEventPlugin from 'react-tap-event-plugin';
+injectTapEventPlugin();
+
 const store = configureStore();
 
 window.store = store;

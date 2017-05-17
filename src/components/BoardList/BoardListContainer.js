@@ -2,8 +2,9 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
+import { FULFILLED } from 'redux-promise-middleware';
 import * as BoardActions from '../../actions/BoardActions';
-import BoardList from '../BoardList';
+import BoardList from './BoardList';
 
 class BoardContainer extends Component {
 
@@ -16,7 +17,9 @@ class BoardContainer extends Component {
 	}
 
 	componentWillMount() {
-		this.props.actions.loadBoards();
+		if (this.props.status !== FULFILLED) {
+			this.props.actions.loadBoards();
+		}
 	}
 
 	render() {
@@ -24,11 +27,7 @@ class BoardContainer extends Component {
 
 		const ids = Object.keys(boards);
 
-		return (
-			<div>
-				<BoardList boards={ids} />
-			</div>
-		);
+		return <BoardList {...this.props} boards={ids}/>;
 	}
 }
 

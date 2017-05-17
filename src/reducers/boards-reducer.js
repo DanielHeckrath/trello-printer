@@ -1,4 +1,4 @@
-import { PENDING, FULFILLED, REJECTED } from 'redux-promise-middleware'
+import { PENDING, FULFILLED, REJECTED } from 'redux-promise-middleware';
 import * as Types from '../actions/Types';
 
 const BOARDS_PENDING = Types.LOAD_BOARDS + '_' + PENDING;

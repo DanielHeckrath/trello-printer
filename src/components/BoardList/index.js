@@ -1,3 +1,3 @@
-import BoardList from './BoardList';
+import BoardListContainer from './BoardListContainer';
 
-export default BoardList;
+export default BoardListContainer;
